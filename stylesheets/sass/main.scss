@@ -1,0 +1,940 @@
+@import "styles";
+
+.clear {
+	clear: both;
+}
+body {
+	margin: 0;
+	height: 100%;
+	padding: 0px;
+	width: 100%;
+	position: absolute;
+	background-color: #e2e2e2;
+    background-image: url('../../images/Hyperbits_Main_BG.jpg');
+	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-attachment: fixed;
+}
+
+html {
+	font-family: $raleway;
+	font-weight: 200;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+h2, h3, h4, h5, li, span {
+	font-family: $raleway;
+	font-weight: 200;
+}
+h5 {
+	font-size: 16px;
+	color: $light-gray;
+	padding: 10px 0 10px 0;
+}
+h1 {
+	font-size: 50px;
+	font-family: $main-font;
+	font-weight: 200;
+}
+nav {
+	border-radius: none;
+	.navbar-brand {
+		img {
+			height: 30px;
+			margin-left: 15px;
+		}	
+	}
+	#navbar ul {
+		li {
+			font-size: 14px;
+			a:hover span{
+				border-bottom: 4px solid $light-gray;
+				
+
+			}
+		}
+	}
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    background: $charcoal;
+    z-index: 1001;
+    font-family: $raleway;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+}
+
+footer #mailing-list {
+	position: relative;
+	float: left;
+	padding-top: 5px;
+	left: 15px;
+	li {
+		display: inline-block;
+		list-style: none;
+		margin-right: 5px;
+	}
+	a {
+		color: $light-gray;
+		padding-bottom: 5px;
+	}
+	a:hover {
+		text-decoration: none;
+		border-bottom: 3px solid $light-gray;
+	}
+	.arrow-left {
+		border-top: 5px solid transparent;
+		border-bottom: 5px solid transparent;
+		border-left: 7px solid $light-gray;
+		display: inline-block;
+		margin-left: 10px;
+	}
+}
+#social {
+	position: relative;
+    float: right;
+    margin-bottom: 10px;
+    li {
+	    position: relative;
+	    display: inline-block;
+	    margin-right: 10px;
+	    margin-left: 0px;
+
+	}
+	a:link, a:visited {
+	    position: relative;
+	    left: 0px;
+	    display: inline-block;    
+	}
+	img {
+	    max-height: 30px;
+	    -webkit-filter: invert(100%);
+	}
+	a:hover {
+		opacity: 0.65;
+	}
+}
+section {
+	position: relative;
+    width: 100%;
+    z-index:990;
+    margin: 0px; 
+    left: 0px;
+    right: 0px;
+    top: -20px;
+    overflow-x: hidden;
+	padding-top: 70px;
+	padding-bottom: 100px;
+}
+.container {
+	max-width: 1000px;
+	padding: 10px;
+	height: auto;
+}
+#home {
+	position: relative;
+	width: 100%;
+	min-height: 110%;
+    z-index:990;
+    top: 0px;
+	padding-top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+
+  	.home-text {
+  		// float: right;
+  		position: relative;
+  		max-width: 700px;
+  		text-align: right;
+  		margin-top: 200px;
+  		padding: 0px;
+  		display: none;
+  		h1 {
+  			color: $light-gray;
+  			font-size: 65px;
+			font-family: $raleway;
+			font-weight: 200;
+			margin-bottom: 20px;
+			background-color: rgba($charcoal,.8);
+  		}
+  	}
+  	#iframe-container {
+  		position: relative;
+    	width: 80px;
+    	float: right;
+	}
+	
+}
+
+@media (min-width: 800px) {
+	#home .home-text {
+		margin-top: 170px;
+		h1 {
+			color: $charcoal;
+			background-color: rgba(0,0,0,0);
+		}
+		#iframe-container {
+			right: 30px;
+		}
+	}
+}
+
+#mix-master {
+	position: relative;
+	background: url('../../images/mixdown-teal.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	.service-box {
+		height: 200px;
+	}
+  	.mix-box {
+  		background-color: rgba(0,0,0,.3);
+  		padding-bottom: 20px;
+  		margin-bottom: 20px;
+  		h2 {
+  			font-size: 28px;
+			text-align: center;
+			color: $light-gray;
+			text-transform: uppercase;
+			padding: 5px;
+		}
+		.service-icon {
+			text-align: center;
+			margin: 0;
+			img {
+				height: 80px;
+				padding: 5px;
+			}
+		}
+		p {
+			color: $light-gray;
+			font-size: 18px;
+			margin-top: 5px;
+		}
+  	}
+  	.service-details {
+		display: none;
+		visibility: none;
+		height: 200px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		color: $light-gray;
+		background-color: rgba(0,0,0,.9);
+		p {
+			padding: 20px;
+			font-size: 18px;
+			text-align: left;
+		}
+		span {
+			position: relative;
+			bottom: 20px;
+			margin: 0 auto;
+			text-align: center;
+			background-color: rgba($light-gray,.3);
+			padding: 10px;
+			font-size: 20px;
+			
+		}
+	}
+  	.services a:hover .service-details {
+  		display: block;
+		visibility: visible;
+		z-index: 1000;
+		top: 0;
+	}
+  	.services {
+  		padding-top: 15px;
+  		padding-bottom: 15px;
+  	}
+	#clients {
+  		padding-top: 15px;
+  		padding-bottom: 15px;
+  		h2 {
+  			margin-bottom: 20px;
+  		}
+  		.client-logo {
+  			margin-bottom: 20px;
+  		}
+		img {
+			width: 100%;
+			max-width: 100px;
+			text-align: center;
+			margin: 0 auto;
+			// -moz-transform: scaleX(-1);
+	  //       -o-transform: scaleX(-1);
+	  //       -webkit-transform: scaleX(-1);
+	  //       transform: scaleX(-1);
+	  //       filter: FlipH;
+	  //       -ms-filter: "FlipH";
+		}
+	}
+	#mix-master-content {
+		padding-top: 20px;
+		padding-bottom: 60px;
+	}
+}
+#mixing-buttons {
+	position: relative;
+	height: 50px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	text-align: center;
+	ul {
+		margin: 0 auto;
+		padding: 0;
+		li {
+			list-style: none;
+			display: inline-block;
+			padding: 0 15px 15px 15px;
+		}
+	}
+}
+.mixing-button-each {
+	position: relative;
+	text-align: center;
+	// padding: 20px 15px 0 15px;
+	button {
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		width: auto;
+		position: relative;
+		text-align: center;
+		color: $light-gray;
+		font-weight: 200;
+		text-align: center;
+		background: rgba(0,0,0,.5);
+		border-bottom: 7px solid rgba(0,0,0,.8);
+		padding: 15px;
+		font-size: 20px;
+		text-decoration: none;
+	}
+	button:hover {
+		background: rgba(0,0,0,.7);
+	}
+	button:active {
+		background: rgba(0,0,0,.7);
+	}
+}
+.mixing-button-expand {
+	position: relative;
+	top: 50px;
+	display: none;
+	background-color: rgba(0,0,0,.3);
+	color: $light-gray;
+	padding: 20px;
+	h4 {
+		padding-bottom: 10px;
+	}
+	ul {
+		text-align: left;
+		padding-left: 10px;
+	}
+}
+
+.display {
+	display: block;
+}
+
+// @media (min-width: 768px) {
+// 		#mix-master .mix-box {
+
+// 	}
+// }
+// @media (min-width: 900px) {
+// 	#mix-master-content {
+// 		margin: 0 auto;
+// 		#clients {
+// 			.client-logo {
+// 				margin-top: 20px;
+// 				margin-bottom: 10px;
+// 				img {
+// 					// max-width: 70px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// @media (min-width: 1200) {
+// 	#mix-master-content {
+// 		#clients {
+// 			.client-logo {
+// 				margin-bottom: 30px;
+// 			}
+// 		}
+// 	}
+// }
+
+#sounds {
+	position: relative;
+	background: #060b1a;
+	background-image: url('../../images/gig-purple.jpg');
+	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: center center;
+  	height: auto;
+	width: 100%;
+}
+
+
+#sounds-content {
+	h1, h2, h3, h4, h5, p, li {
+		color: $light-gray;
+	}
+	margin: 0 auto;
+	height: auto;
+	h1 {
+		padding: 0 0 0 35px;
+	}
+	.sound-item {
+		margin: 0 auto;
+		position: relative;
+		text-align: center;
+		img {
+			width: 300px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.sound-item-visuals {
+			margin: 0 auto;
+			text-align: center;
+			padding-bottom: 30px;
+		}
+		.sound-item-description {
+			text-align: left;
+
+		}
+		span {
+			height: 40px;
+			margin: 0;
+			padding: 10px; 
+			width: 130px;
+			display: block;
+			color: white;
+			background-color: rgba($light-gray,.2);
+			text-align: left;
+		}
+		h4 {
+			background-color: rgba($light-gray,.2);
+			padding: 10px;
+			width: 100%;
+			margin: 0;
+			line-height: 25px;
+			text-align: center;
+		}
+		p {
+			padding-top: 10px;
+		}
+		ul {
+
+			li {
+				text-align: left;
+				list-style-type: disc;
+				margin: 0px;
+				font-weight: 300;
+				padding: 0 15px 5px 0px;
+			}
+		}
+	}
+	iframe {
+		width: 90%;
+		height: 130px;
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+	.button-holder {
+		margin: 0 auto;
+		padding-top: 20px;
+		text-align: center;
+		width: 150px;
+	}
+	a {
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		width: 150px;
+		position: relative;
+		text-align: center;
+		color: $charcoal;
+		font-weight: 200;
+		text-align: center;
+		background: rgba($light-gray,.8);
+		border-bottom: 5px solid rgba($light-gray,1);
+		padding: 10px;
+		font-size: 16px;
+		text-decoration: none;
+	}
+	a:hover {
+		background: rgba($light-gray,1);
+	}
+	.hover-box {
+		width: 300px;
+		height: 300px;
+		z-index: 900;
+		position: absolute;
+		top: 40px;
+		background-color: rgba(11,6,26,.8);
+		color: white;
+		display: none;
+		visibility: none;
+		h4 {
+			padding: 0 0 10px 0;
+			margin: 0;
+		}
+		p {
+			text-align: left;
+		}
+		padding: 10px;
+		
+	}
+	a:hover .hover-box {
+		display: block;
+		visibility: visible;
+	}
+	.cost {
+		position: relative; 
+		float: right;
+		padding: 4px 5px 2px 5px;
+		background-color: white;
+		color: black;
+		font-size: 10px;
+		border-bottom: 4px solid $light-gray;
+		margin-top: 10px;
+		font-weight: 600;
+	}
+}
+.arrow-left {
+	width: 0; 
+	height: 0; 
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	border-left: 10px solid $light-gray;
+	display: inline-block;
+	margin-left: 10px;
+}
+h3 {
+		font-size: 36px;
+		padding: 10px;
+		color: $light-gray;
+		margin-bottom: 50px;
+	}
+#online-courses {
+	background: url('../../images/hyperbits-studio.jpg');
+	background-size: cover;
+	height: auto;
+	width: 100%;
+	position: relative;
+	color: $light-gray;
+	
+	h4 {
+		font-size: 20px;
+		background-color: rgba($light-gray,.2);
+		padding: 10px;
+		margin: 0;
+		line-height: 28px;
+		text-align: center;
+	}
+	.coming-soon {
+		text-align: center;
+		font-size: 20px;
+		margin: 0 auto;
+		padding-top: 20px;
+		span {
+			font-weight: 600;
+		}
+	}
+	p {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 0;
+		text-align: left;
+	}
+	ul {
+		list-style: disc;
+		padding-top: 0px;
+		color: white; 
+	  	li {
+		    line-height: 25px;
+		    font-size: 15px; 
+		}
+	}
+	.course-visuals {
+		margin: 0 auto;
+		text-align: center;
+		img {
+			width: 300px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	.course-description {
+		padding-bottom: 30px;
+	}
+
+	iframe {
+		width: 90%;
+		height: 130px;
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+	.button-holder {
+		margin: 0 auto;
+		padding-top: 20px;
+		text-align: center;
+		width: 150px;
+		a {
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+			width: 150px;
+			position: relative;
+			text-align: center;
+			color: $charcoal;
+			font-weight: 200;
+			text-align: center;
+			background: rgba($light-gray,.8);
+			border-bottom: 5px solid rgba($light-gray,1);
+			padding: 10px;
+			font-size: 16px;
+			text-decoration: none;
+		}
+	}
+	
+}
+#masterclass {
+	background: url('../../images/mixdown-teal.png');
+	background-size: cover;
+	height: auto;
+	width: 100%;
+	position: relative;
+	color: $light-gray;
+	h3 {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	h4 {
+		font-size: 20px;
+		padding: 10px;
+		width: 100%;
+		margin: 0;
+		line-height: 25px;
+		text-align: center;
+	}
+	.course-description {
+		margin: 0 auto;
+		text-align: center;
+	}
+	ul {
+		width: auto;
+		margin: 0 auto;
+		text-align: center;
+		list-style: none;
+		padding-top: 20px;
+		color: white; 
+	  	li {
+	  		text-align: center;
+		    line-height: 30px;
+		    font-size: 18px; 
+		    font-weight: 200;
+		}
+	}
+	.course-video {
+		padding-top: 20px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	#more-info-row {
+		width: 100%;
+		position: relative;
+		padding-top: 30px;
+	}
+	.more-info-course {
+		position: relative;
+		text-align: center;
+		border-top: 0;
+		border-left: 0;
+		border-right:0;
+  		color: $light-gray;
+  		font-weight: 200;
+		background: rgba($light-gray,.3);
+		border-bottom: 5px solid rgba($light-gray,.4);
+		padding: 10px;
+		font-size: 16px;
+		text-decoration: none;
+		margin-bottom: 30px;
+	}
+	a:hover {
+  		background: rgba($light-gray,.5); 
+  	}
+  	.payment-options {
+  		position: relative;
+  		margin: 0 auto;
+  		text-align: center;
+  		padding-top: 50px;
+  		.payment-each {
+  			padding: 10px;
+  			display: inline-block;
+  			form {
+  				text-align: center;
+  				max-width: 200px;
+  			}
+  			form:hover {
+		  		opacity:.6;
+		  	}
+  		}
+  	}
+}
+#past-students {
+	position: relative;
+	// background-attachment: fixed;
+	background-image: url('../../images/Hyperbits_LIT.jpg');
+	background-repeat: no-repeat;
+  	background-size: cover;
+}
+#students-content {
+	h3 {
+		text-align: center;
+		color: $light-gray;
+	}
+	p {
+		color: $light-gray;
+		font-size: 16px;
+		font-weight: 200;
+	}
+	span {
+		color: $light-gray;
+		font-size: 15px;
+		font-weight: 200;
+		background-color: rgba($light-gray, .3);
+		padding: 5px;
+	}
+	#students-list {
+		max-width: 700px;
+		height: auto;
+		margin: 0 auto;
+		#hypemachine {
+			padding: 7px 2px 25px 2px;
+			line-height: 35px;
+			text-align: center;
+			img {
+				max-width: 250px;
+				padding-bottom: 3px;
+				padding-left: 5px;
+			}
+			border-bottom: 5px solid rgba($light-gray,.5);
+		}
+		#discovery-winners {
+			border-bottom: 5px solid rgba($light-gray,.5);
+			padding: 30px 10px 25px 10px;
+			text-align: center;
+			:first-child {
+				
+				width: 180px;
+			}
+			:nth-child(3) {
+				width: 180px;
+			}
+		}
+		.dj-logo {
+			max-width: 220px;
+			max-height: 70px;
+			float: left;
+			padding: 10px;
+		}
+		#blog-support {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			text-align: center;
+			img {
+				width: 100%;
+				padding-top: 20px;
+			}
+			border-bottom: 5px solid rgba($light-gray,.5);
+		}
+		
+		#tour {
+			padding-top: 30px;
+			margin: 0 auto;
+			text-align: center;
+			span {
+				font-weight: 600;
+				font-size: 16px;
+				text-align: center;
+				background-color: rgba($light-gray, .3);
+				line-height: 35px;
+			}
+			:nth-child(2), :nth-child(4) {
+				font-weight: 300;
+				font-size: 14px;
+				padding-top: 7px;
+				background: none;
+			}
+		}
+	}
+	#form-outer {
+		padding: 0 0 50px 0;
+		max-width: 600px;
+	}
+	form {
+		padding: 25px;
+		background-color: rgba($charcoal,.5);
+		font-size: 14px;
+		font-weight: 300;
+		input {
+			background-color: $dark-purple;
+			border: none;
+			padding: 10px;
+			margin: 0 0 10px 0;
+			color: $light-gray;
+			width: 100%;
+		}
+		:nth-child(4) {
+			padding-left: 0;
+			padding-top: 10px;
+		}
+		.help-options {
+			padding: 0;
+			input[type="checkbox"] {
+				-webkit-appearance: none;
+				background-color: $dark-purple;
+				padding: 9px;
+				width: 20px;
+				float: left;
+				margin: 0 7px -5px 0;
+				border-radius: 0px;
+				display: inline-block;
+				position: relative;
+			}
+			input[type="checkbox"]:checked {
+				color: $light-gray;
+				box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+				padding: 9px;
+				outline: none;
+				margin: 0 7px -5px 0;
+				border-radius: 0px;
+				display: inline-block;
+				position: relative;
+			}
+			input[type="checkbox"]:checked:after {
+				content: 'X';
+				font-size: 14px;
+				position: absolute;
+				outline: none;
+				padding-left: 3px;
+				box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+				top: 0px;
+				left: 3px;
+				color: $light-gray;
+			}
+			margin-top: 10px;
+
+			:nth-child(2) {
+				float: left;
+			}
+		}
+		.submit {
+			position: relative;
+			margin-top: 40px;
+			background-color: $purple;
+			border: none;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (min-width: 520px) {
+	#lessons {
+		#past-students {
+			#hypemachine {
+				padding-bottom: 5px;
+			}
+			#support-title {
+				padding: 10px 0px 15px 0px;
+			}
+			#support-right {
+			}
+		}
+	}
+}
+@media (min-width: 550px) {
+	#lessons {
+		#past-students {
+			#hypemachine {
+				padding: 10px;
+			}
+			#support-title {
+				padding: 15px 0px 20px 0px;	
+			}
+		}
+	}
+}
+@media (min-width: 574px) {
+	#lessons {
+		#past-students {
+			#hypemachine {
+				padding: 20px 10px 20px 10px;
+			}
+			#support-title {
+				padding: 15px 0px 20px 0px;	
+			}
+			#discovery-winners {
+				padding: 13px;
+			}
+		}
+	}	
+}
+@media (min-width: 900px) {
+	#lessons {
+		#past-students {
+			#hypemachine {
+				padding: 7px;
+			}
+			#support-title {
+				padding: 15px 0px 13px 0px;	
+			}
+			#discovery-winners {
+				padding: 10px;
+			}
+			#blog-support {
+				padding-bottom: 20px;
+			}
+		}
+		#form-outer {
+			padding-left: 20px;
+			padding-top: 25px;
+			form {
+				height: 430px;
+			}
+		}
+	}	
+}
+@media (min-width: 1200px) {
+	#lessons {
+		#past-students {
+			#hypemachine {
+				padding: 10px;
+			}
+			#support-title {
+				padding: 7px;	
+			}
+		}
+	}	
+}
+
+
+
+
+
